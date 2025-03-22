@@ -8,8 +8,8 @@ Program::Program(){
     textSize = scary.MeasureText(text, 20.0f, 0.0f);
     xSpeed = 2;
     ySpeed = 2;
-    xPos = GetRandomValue(0, GetScreenWidth()-(raylib::TextLength(text)));
-    yPos = GetRandomValue(0, GetScreenHeight()-(raylib::TextLength(text)));
+    xPos = GetRandomValue(0, GetScreenWidth()-textSize.x);
+    yPos = GetRandomValue(0, GetScreenHeight()-textSize.y);
 }
 
 void Program::Update(){
