@@ -3,7 +3,7 @@
 Program::Program(){
     bounce.Load("bounce.mp3");
     bounce.SetVolume(0.3f);
-    scary.Load("scary.ttf");
+    scary.Load("Scary.ttf");
     text = "Welcome to Advanced Programming";
     textSize = scary.MeasureText(text, 20.0f, 0.0f);
     xSpeed = 2;
