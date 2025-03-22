@@ -14,13 +14,17 @@ void Program::Update(){
 void Program::Draw(){
     ClearBackground(GRAY);
 
-    scary.DrawText("PA0", (GetScreenWidth()/2), 200, 20.0f, 20.0f, WHITE);
+    scary.DrawText("PA0", (GetScreenWidth()/2), 5, 20.0f, 0.0f, WHITE);
 
-    scary.DrawText("Hello Students", 200, 200, 20.0f, 20.0f, WHITE);
+    scary.DrawText("Hello Students", 200, 200, 20.0f, 0.0f, WHITE);
 }
 
 void Program::Unload(){
     cool.Unload();
     bounce.Unload();
     scary.Unload();
+}
+
+Program::~Program() {
+    Unload();
 }

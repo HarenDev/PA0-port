@@ -44,10 +44,6 @@ int main ()
 		EndDrawing();
 	}
 
-	// cleanup
-	// unload our program resources
-	program.Unload();
-
 	CloseAudioDevice();
 
 	// destroy the window and cleanup the OpenGL context

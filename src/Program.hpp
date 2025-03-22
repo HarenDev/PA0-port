@@ -3,12 +3,6 @@
 #include "raylib-cpp/raylib-cpp.hpp"
 
 class Program {
-    public:
-    void Init();
-    void Update();
-    void Draw();
-    void Unload();
-
     private:
     int xPos;
     int yPos;
@@ -19,5 +13,12 @@ class Program {
     raylib::Texture cool;
     raylib::Sound bounce;
     raylib::Font scary;
+    
+    public:
+    void Init();
+    void Update();
+    void Draw();
+    void Unload();
 
+    ~Program();
 };
