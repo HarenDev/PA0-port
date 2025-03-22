@@ -16,22 +16,19 @@ int main ()
 	// Utility function from resource_dir.h to find the resources folder and set it as the current working directory so we can load from it
 	SearchAndSetResourceDir("resources");
 
-	// Create the window and OpenGL context & tell the window to use vsync and work on high DPI displays
-	raylib::Window window(1024, 724, "Hello Students", FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
-
 	//Can't load sound without this method
     InitAudioDevice();
 
-	// Create program
-	Program program;
+	// Create the window and OpenGL context & tell the window to use vsync and work on high DPI displays
+	raylib::Window window(1024, 724, "Hello Students!!!", FLAG_VSYNC_HINT | FLAG_WINDOW_HIGHDPI);
 
-	// Initialize program
-	program.Init();
+	// Create program (if we were loading images & fonts, 
+	//then you need to make sure that you load() them after window creation)
+	Program program;
 	
 	// game loop
 	while (!WindowShouldClose())		// run the loop untill the user presses ESCAPE or presses the Close button on the window
-	{
-		
+	{	
 		//Update program logic before we draw
 		program.Update();
 
@@ -44,6 +41,7 @@ int main ()
 		EndDrawing();
 	}
 
+	//End the audio device
 	CloseAudioDevice();
 
 	// destroy the window and cleanup the OpenGL context

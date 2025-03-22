@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+#include <string>
 #include "raylib-cpp/raylib-cpp.hpp"
 
 class Program {
@@ -8,17 +10,18 @@ class Program {
     int yPos;
     int xSpeed;
     int ySpeed;
+    std::string text;
 
     //raylib methods
-    raylib::Texture cool;
     raylib::Sound bounce;
     raylib::Font scary;
+    raylib::Vector2 textSize;
     
     public:
-    void Init();
+    Program();
+    ~Program();
+
     void Update();
     void Draw();
-    void Unload();
-
-    ~Program();
+    void Unload();    
 };
